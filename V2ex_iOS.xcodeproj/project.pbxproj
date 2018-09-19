@@ -15,6 +15,12 @@
 		43E19D762152CF5100CAA2FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E19D742152CF5100CAA2FC /* LaunchScreen.storyboard */; };
 		43E19D812152CF5200CAA2FC /* V2ex_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D802152CF5200CAA2FC /* V2ex_iOSTests.swift */; };
 		43E19D8C2152CF5200CAA2FC /* V2ex_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D8B2152CF5200CAA2FC /* V2ex_iOSUITests.swift */; };
+		43E19D9E2152CFE900CAA2FC /* V2exAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D9D2152CFE900CAA2FC /* V2exAPIService.swift */; };
+		43E19DA02152D8C400CAA2FC /* marked.js in Resources */ = {isa = PBXBuildFile; fileRef = 43E19D9F2152D8C400CAA2FC /* marked.js */; };
+		43E19DA22152D8E300CAA2FC /* MarkdownService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19DA12152D8E300CAA2FC /* MarkdownService.swift */; };
+		43E19DA42152E6CA00CAA2FC /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 43E19DA32152E6CA00CAA2FC /* github-markdown.css */; };
+		43E19DA62152E70A00CAA2FC /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = 43E19DA52152E70A00CAA2FC /* highlight.js */; };
+		43E19DA82152E73100CAA2FC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 43E19DA72152E73100CAA2FC /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		43E19D872152CF5200CAA2FC /* V2ex_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2ex_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E19D8B2152CF5200CAA2FC /* V2ex_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2ex_iOSUITests.swift; sourceTree = "<group>"; };
 		43E19D8D2152CF5200CAA2FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43E19D9D2152CFE900CAA2FC /* V2exAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2exAPIService.swift; sourceTree = "<group>"; };
+		43E19D9F2152D8C400CAA2FC /* marked.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = marked.js; sourceTree = "<group>"; };
+		43E19DA12152D8E300CAA2FC /* MarkdownService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownService.swift; sourceTree = "<group>"; };
+		43E19DA32152E6CA00CAA2FC /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-markdown.css"; sourceTree = "<group>"; };
+		43E19DA52152E70A00CAA2FC /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.js; sourceTree = "<group>"; };
+		43E19DA72152E73100CAA2FC /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,9 @@
 		43E19D672152CF4F00CAA2FC /* V2ex_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				43E19D682152CF4F00CAA2FC /* AppDelegate.swift */,
-				43E19D6A2152CF4F00CAA2FC /* ViewController.swift */,
-				43E19D6C2152CF4F00CAA2FC /* Main.storyboard */,
-				43E19D722152CF5100CAA2FC /* Assets.xcassets */,
-				43E19D742152CF5100CAA2FC /* LaunchScreen.storyboard */,
+				43E19D992152CF6500CAA2FC /* Sources */,
+				43E19D9C2152CFA300CAA2FC /* Resources */,
 				43E19D772152CF5100CAA2FC /* Info.plist */,
-				43E19D6F2152CF4F00CAA2FC /* V2ex_iOS.xcdatamodeld */,
 			);
 			path = V2ex_iOS;
 			sourceTree = "<group>";
@@ -126,6 +134,48 @@
 				43E19D8D2152CF5200CAA2FC /* Info.plist */,
 			);
 			path = V2ex_iOSUITests;
+			sourceTree = "<group>";
+		};
+		43E19D992152CF6500CAA2FC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				43E19D9B2152CF8300CAA2FC /* Services */,
+				43E19D9A2152CF7B00CAA2FC /* Controllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		43E19D9A2152CF7B00CAA2FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43E19D6A2152CF4F00CAA2FC /* ViewController.swift */,
+				43E19D682152CF4F00CAA2FC /* AppDelegate.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		43E19D9B2152CF8300CAA2FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				43E19D9D2152CFE900CAA2FC /* V2exAPIService.swift */,
+				43E19DA12152D8E300CAA2FC /* MarkdownService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		43E19D9C2152CFA300CAA2FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				43E19DA52152E70A00CAA2FC /* highlight.js */,
+				43E19DA32152E6CA00CAA2FC /* github-markdown.css */,
+				43E19D9F2152D8C400CAA2FC /* marked.js */,
+				43E19D6C2152CF4F00CAA2FC /* Main.storyboard */,
+				43E19D722152CF5100CAA2FC /* Assets.xcassets */,
+				43E19D742152CF5100CAA2FC /* LaunchScreen.storyboard */,
+				43E19D6F2152CF4F00CAA2FC /* V2ex_iOS.xcdatamodeld */,
+				43E19DA72152E73100CAA2FC /* index.html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E19DA82152E73100CAA2FC /* index.html in Resources */,
+				43E19DA42152E6CA00CAA2FC /* github-markdown.css in Resources */,
+				43E19DA02152D8C400CAA2FC /* marked.js in Resources */,
 				43E19D762152CF5100CAA2FC /* LaunchScreen.storyboard in Resources */,
+				43E19DA62152E70A00CAA2FC /* highlight.js in Resources */,
 				43E19D732152CF5100CAA2FC /* Assets.xcassets in Resources */,
 				43E19D6E2152CF4F00CAA2FC /* Main.storyboard in Resources */,
 			);
@@ -259,9 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E19DA22152D8E300CAA2FC /* MarkdownService.swift in Sources */,
 				43E19D6B2152CF4F00CAA2FC /* ViewController.swift in Sources */,
 				43E19D692152CF4F00CAA2FC /* AppDelegate.swift in Sources */,
 				43E19D712152CF4F00CAA2FC /* V2ex_iOS.xcdatamodeld in Sources */,
+				43E19D9E2152CFE900CAA2FC /* V2exAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
