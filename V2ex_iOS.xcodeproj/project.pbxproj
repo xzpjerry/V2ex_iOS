@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43E19D692152CF4F00CAA2FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D682152CF4F00CAA2FC /* AppDelegate.swift */; };
-		43E19D6B2152CF4F00CAA2FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D6A2152CF4F00CAA2FC /* ViewController.swift */; };
+		43E19D6B2152CF4F00CAA2FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D6A2152CF4F00CAA2FC /* DetailViewController.swift */; };
 		43E19D6E2152CF4F00CAA2FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E19D6C2152CF4F00CAA2FC /* Main.storyboard */; };
 		43E19D712152CF4F00CAA2FC /* V2ex_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43E19D6F2152CF4F00CAA2FC /* V2ex_iOS.xcdatamodeld */; };
 		43E19D732152CF5100CAA2FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E19D722152CF5100CAA2FC /* Assets.xcassets */; };
@@ -21,6 +21,9 @@
 		43E19DA42152E6CA00CAA2FC /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 43E19DA32152E6CA00CAA2FC /* github-markdown.css */; };
 		43E19DA62152E70A00CAA2FC /* highlight.js in Resources */ = {isa = PBXBuildFile; fileRef = 43E19DA52152E70A00CAA2FC /* highlight.js */; };
 		43E19DA82152E73100CAA2FC /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 43E19DA72152E73100CAA2FC /* index.html */; };
+		43E19DAB215415B800CAA2FC /* threadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19DAA215415B800CAA2FC /* threadCell.swift */; };
+		43E19DAD21541F4600CAA2FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19DAC21541F4600CAA2FC /* HomeViewController.swift */; };
+		43E19DAF2154219E00CAA2FC /* localdatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E19DAE2154219E00CAA2FC /* localdatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,7 @@
 /* Begin PBXFileReference section */
 		43E19D652152CF4F00CAA2FC /* V2ex_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2ex_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E19D682152CF4F00CAA2FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43E19D6A2152CF4F00CAA2FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43E19D6A2152CF4F00CAA2FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		43E19D6D2152CF4F00CAA2FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43E19D702152CF4F00CAA2FC /* V2ex_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = V2ex_iOS.xcdatamodel; sourceTree = "<group>"; };
 		43E19D722152CF5100CAA2FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		43E19DA32152E6CA00CAA2FC /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-markdown.css"; sourceTree = "<group>"; };
 		43E19DA52152E70A00CAA2FC /* highlight.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = highlight.js; sourceTree = "<group>"; };
 		43E19DA72152E73100CAA2FC /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		43E19DAA215415B800CAA2FC /* threadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = threadCell.swift; sourceTree = "<group>"; };
+		43E19DAC21541F4600CAA2FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		43E19DAE2154219E00CAA2FC /* localdatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localdatabaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,8 @@
 		43E19D992152CF6500CAA2FC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				43E19DBE215423A400CAA2FC /* Modals */,
+				43E19DA92154159F00CAA2FC /* Views */,
 				43E19D9B2152CF8300CAA2FC /* Services */,
 				43E19D9A2152CF7B00CAA2FC /* Controllers */,
 			);
@@ -148,8 +156,9 @@
 		43E19D9A2152CF7B00CAA2FC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				43E19D6A2152CF4F00CAA2FC /* ViewController.swift */,
+				43E19D6A2152CF4F00CAA2FC /* DetailViewController.swift */,
 				43E19D682152CF4F00CAA2FC /* AppDelegate.swift */,
+				43E19DAC21541F4600CAA2FC /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 			children = (
 				43E19D9D2152CFE900CAA2FC /* V2exAPIService.swift */,
 				43E19DA12152D8E300CAA2FC /* MarkdownService.swift */,
+				43E19DAE2154219E00CAA2FC /* localdatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,6 +186,21 @@
 				43E19DA72152E73100CAA2FC /* index.html */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		43E19DA92154159F00CAA2FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43E19DAA215415B800CAA2FC /* threadCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		43E19DBE215423A400CAA2FC /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +339,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E19DA22152D8E300CAA2FC /* MarkdownService.swift in Sources */,
-				43E19D6B2152CF4F00CAA2FC /* ViewController.swift in Sources */,
+				43E19DAB215415B800CAA2FC /* threadCell.swift in Sources */,
+				43E19D6B2152CF4F00CAA2FC /* DetailViewController.swift in Sources */,
 				43E19D692152CF4F00CAA2FC /* AppDelegate.swift in Sources */,
 				43E19D712152CF4F00CAA2FC /* V2ex_iOS.xcdatamodeld in Sources */,
+				43E19DAD21541F4600CAA2FC /* HomeViewController.swift in Sources */,
+				43E19DAF2154219E00CAA2FC /* localdatabaseService.swift in Sources */,
 				43E19D9E2152CFE900CAA2FC /* V2exAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

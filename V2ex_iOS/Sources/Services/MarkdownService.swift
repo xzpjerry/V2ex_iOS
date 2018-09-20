@@ -28,7 +28,7 @@ class MarkdownService {
             debugPrint("initialized marked js with error!")
         }
     }
-    static var shared = MarkdownService()
+    static let shared = MarkdownService()
     
     func toString(content : String) -> String {
         guard let value = marked?.call(withArguments: [content]) else {
