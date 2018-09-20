@@ -10,11 +10,12 @@ import Foundation
 
 class V2exAPIService {
     private init(){}
+    private let hot_json = "https://www.v2ex.com/api/topics/hot.json"
     static var shared = V2exAPIService()
     
-    func test(completion_handler : @escaping (_ content : String) -> Void){
+    func get_hotest(completion_handler : @escaping (_ content : String) -> Void){
         var result : [String] = []
-        let url = URL(string: "https://www.v2ex.com/api/topics/hot.json")
+        let url = URL(string: hot_json)
         let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
             
             guard let data = data, error == nil else {
@@ -24,15 +25,26 @@ class V2exAPIService {
             
             if let json_array = try? JSONSerialization.jsonObject(with: data, options: []) as! [Any] {
                 for obj in json_array {
-                    if let dict = obj as? [String : Any], let content = dict["content"] as? String {
-                        print(content)
-                        result.append(MarkdownService.shared.toString(content: content))
+                    if let dict = obj as? [String : Any] {
+                        print(dict.keys)
+                        print(dict["member"])
+                        
+                        print(dict["id"]) // thread id
+                        print(dict["node"]) // node dict
+                        print(dict["url"])
+                        print(dict["created"])// unix timestamp
+                        print(dict["replies"])
+                        print(dict["last_reply_by"])// user name
+                        print(dict["last_touched"])// unix timestamp
+                        print(dict["title"])
+                        print(dict["content_rendered"]) // html
+                        print(dict["content"]) // string
                         break
                     }
                 }
             }
             
-            completion_handler(result[0])
+//            completion_handler(result[0])
             
         }
         

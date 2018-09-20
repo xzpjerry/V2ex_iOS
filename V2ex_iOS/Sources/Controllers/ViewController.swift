@@ -29,7 +29,7 @@ class ViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        V2exAPIService.shared.test(completion_handler: update_webview(_:))
+        V2exAPIService.shared.get_hotest(completion_handler: update_webview(_:))
     }
 
 
